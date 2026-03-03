@@ -1,50 +1,39 @@
-# Welcome to your Expo app 👋
+# CalculadoraExpo
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+Protótipo desejado da calculadora.
 
-## Get started
+1 | 2 | 3 | /
 
-1. Install dependencies
+4 | 5 | 6 | *
 
-   ```bash
-   npm install
-   ```
+7 | 8 | 9 | -
 
-2. Start the app
+R²| 0 | . | +
 
-   ```bash
-   npx expo start
-   ```
+ | C | = | 
 
-In the output, you'll find options to open the app in a
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+Requisitos do sistema, Funcionais / Não Funcionais
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+Ao cliclar em número/botão, deve ser atribuido o valor descrito no botão.
 
-## Get a fresh project
+Ao clicar em uma operação, deve-se realizar a operação desejada.
 
-When you're ready, run:
+Ao clicar na tecla de um número, após em um botão de operação, depois novamente em um número, deve-se realizar a operação completa, e ao clicar no " = ", o resultado deve ser exibido na tela.
 
-```bash
-npm run reset-project
-```
+Objetivos
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+1° Colocar os 20 botões na tela.
 
-## Learn more
+2° Colocar os botões em ordem, como descrito no protótipo.
 
-To learn more about developing your project with Expo, look at the following resources:
+3° Atribuir os valores para cada botão.
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+4° Definir as funções de cada operação.
 
-## Join the community
+5° Exibir o resultado na tela.
 
-Join our community of developers creating universal apps.
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+
+Envio da atividade da criação de uma calculadora.
+>>>>>>> 9a394a22d95e00d763277ea27ac1649f33f2332f
