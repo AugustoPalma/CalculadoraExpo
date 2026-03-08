@@ -42,4 +42,3 @@ Objetivos
 
 
 Envio da atividade da criação de uma calculadora.
->>>>>>> 9a394a22d95e00d763277ea27ac1649f33f2332f
