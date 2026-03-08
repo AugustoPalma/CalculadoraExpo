@@ -13,6 +13,11 @@ export default function RootLayout() {
 			setnumeroClicado("");
 			return;
 		}
+		
+		if(valor === "R²"){
+			raizQuadrada();
+			return;
+		}
 
 		if(valor === "="){
 			try{
@@ -28,27 +33,45 @@ export default function RootLayout() {
 		setnumeroClicado(numeroClicado + valor);
 	}
 
-	function Botao({ label }: { label: string }){
+
+	function raizQuadrada(){
+		const numero = parseFloat(numeroClicado);
+
+		if(numero < 0){
+			setnumeroClicado("ERRO");
+			return;
+		}
+		let x = numero;
+		
+		for(let i = 0; i < 10; i++){
+			x = (x + numero / x) / 2;
+		}
+		setnumeroClicado(x.toString());
+	}
+
+	function Botao({ label, style }: { label: string, style?: any }){
 		return(
-			<TouchableOpacity style={Styles.Botao} onPress={() => Concatenar(label)}>
+			<TouchableOpacity style={[Styles.Botao, style]} onPress={() => Concatenar(label)}>
 				<Text style={Styles.textoBotao}>{label}</Text>
 			</TouchableOpacity>
 		);
 	}
 
+	
+
 	return (
-		
-      <View style={Styles.container}> 
+	  <View style={Styles.container2}>
+        <View style={Styles.container}> 
 		<Text style={Styles.titulo}>
 			{numeroClicado === "" ? "0" : numeroClicado}
 		</Text>
 
 		<View style={Styles.linha}>
 
-			<Botao label = "AC" />
-			<Botao label = "R²" />
-			<Botao label = "." />
-			<Botao label = "/" />
+			<Botao style={Styles.botaoCinza} label = "AC" />
+			<Botao style={Styles.botaoCinza} label = "R²" />
+			<Botao style={Styles.botaoCinza} label = "." />
+			<Botao style={Styles.botaoAmarelo} label = "/" />
 
 		</View>
 
@@ -57,7 +80,7 @@ export default function RootLayout() {
 		<Botao label = "1" />
 		<Botao label = "2" />
 		<Botao label = "3" />
-		<Botao label = "*" />
+		<Botao style={Styles.botaoAmarelo} label = "*" />
 
 
 		</View>
@@ -67,7 +90,7 @@ export default function RootLayout() {
 			<Botao label = "4" />
 			<Botao label = "5" />
 			<Botao label = "6" />
-			<Botao label = "-" />
+			<Botao style={Styles.botaoAmarelo} label = "-" />
 
 		</View>
 
@@ -76,36 +99,50 @@ export default function RootLayout() {
 			<Botao label = "7" />
 			<Botao label = "8" />
 			<Botao label = "9" />
-			<Botao label = "+" />
+			<Botao style={Styles.botaoAmarelo} label = "+" />
 
 		</View>
 
 		<View style={Styles.linha}>
-
-			<View style={Styles.botaoVazio} />
+			
 			<Botao label = "0" />
 			
-			<View style={Styles.botaoVazio} />
-			<Botao label = "=" />
+			<Botao style={Styles.botaoAmarelo} label = "=" />
 
 		</View>
-      </View>
+        </View>
+	  </View>
 		
 	);
 }
 
 const Styles = StyleSheet.create({
 
+	container2: {
+		backgroundColor: "#DEDEDE",
+		flex: 1,
+
+	},
+
 	container: {
 		flex: 1,
+		marginHorizontal: 550,
+		marginVertical: 60,
+		borderRadius: 20,
+		marginBottom: 50,
+		backgroundColor: "#000000",
 		justifyContent: "center",
-		padding: 20
+		padding: 40
+		
 	},
 
 	titulo: {
-		fontSize: 24,
+		fontSize: 25,
+		borderRadius: 20,
+		padding: 10,
+		backgroundColor: "gray",
 		textAlign: "center",
-		marginBottom: 20
+		marginBottom: 30
 	},
 
 	linha: {
@@ -116,25 +153,29 @@ const Styles = StyleSheet.create({
 
 	Botao: {
 		flex: 1,
-		backgroundColor: "orange",
+		backgroundColor: "#303030",
 		marginHorizontal: 5,
 		paddingVertical: 20,
-		borderRadius: 15,
+		borderRadius: 1000,
 		justifyContent: "center",
 		alignItems: "center"	
 	},
 
 	textoBotao: {
-		fontSize: 18,
+		fontSize: 25,
 		fontWeight: "bold",
+		color: "white",
+		alignItems: "center"
 	},
 
-	botaoVazio: {
-		flex: 1, 
-		backgroundColor: "gray",
-		marginHorizontal: 5,
-		paddingVertical: 20,
-		borderRadius: 15,
+	botaoCinza: {
+		backgroundColor: "#67666B"
+	},
+
+	botaoAmarelo: {
+		backgroundColor: "#FFA809"
 	}
+
+	
 
 })

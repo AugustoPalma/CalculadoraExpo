@@ -2,15 +2,15 @@
 
 Protótipo desejado da calculadora.
 
-1 | 2 | 3 | /
+AC | R² | . | /
 
-4 | 5 | 6 | *
+1 | 2 | 3 | *
 
-7 | 8 | 9 | -
+4 | 5 | 6 | -
 
-R²| 0 | . | +
+7 | 8 | 9 | +
 
- | C | = | 
+  | 0 |  | =
 
 
 Requisitos do sistema, Funcionais / Não Funcionais
@@ -20,6 +20,10 @@ Ao cliclar em número/botão, deve ser atribuido o valor descrito no botão.
 Ao clicar em uma operação, deve-se realizar a operação desejada.
 
 Ao clicar na tecla de um número, após em um botão de operação, depois novamente em um número, deve-se realizar a operação completa, e ao clicar no " = ", o resultado deve ser exibido na tela.
+
+A Calculadora deverá ter um visual agradáevel com inspiração na calculadora do Iphone.
+
+Todos os botões devem ser funcionais
 
 Objetivos
 
@@ -31,7 +35,9 @@ Objetivos
 
 4° Definir as funções de cada operação.
 
-5° Exibir o resultado na tela.
+5° Concatenar os números clicados e realizar a operação desejada após a confirmação através do botão " = ".
+
+6° Exibir o resultado na tela.
 
 
 
